@@ -1,0 +1,2 @@
+# Group-Project
+Mining application

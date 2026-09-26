@@ -1,0 +1,42 @@
+Worker ID,Department,Job Role,Shift,PPE Compliance (%),Safety Training Status,Fatigue Level,Safety Observations,Near Misses,Previous Incidents,Risk Level
+WRK-001,Processing Plant,Processor,Night,82,Pending,Low,Reported malfunctioning equipment guard,0,0,Low
+WRK-002,Mining Operations,Driller,Night,87,Completed,Low,Reported malfunctioning equipment guard,0,0,Low
+WRK-003,Safety,Safety Officer,Night,54,Completed,High,Positive safety behaviour observed,2,2,Critical
+WRK-004,Drilling,Blaster,Day,52,Completed,Medium,Reported loose handrail near shaft entrance,3,2,Critical
+WRK-005,Haulage,Transporter,Night,94,Completed,Low,Positive safety behaviour observed,0,0,Low
+WRK-006,Maintenance,Mechanic/Repairman,Night,90,Pending,Low,Reported loose handrail near shaft entrance,0,0,Low
+WRK-007,Processing Plant,Processor,Night,82,Pending,Low,Reported fatigue during shift handover,0,0,Low
+WRK-008,Haulage,Transporter,Night,45,Expired,Medium,Reported loose handrail near shaft entrance,0,2,High
+WRK-009,Safety,Safety Inspector,Night,91,Completed,Low,PPE not worn correctly during inspection,1,0,Low
+WRK-010,Maintenance,Welder,Day,92,Completed,Medium,Reported loose handrail near shaft entrance,0,0,Low
+WRK-011,Processing Plant,Processor,Night,88,Pending,High,No concerns noted,4,0,High
+WRK-012,Maintenance,Mechanic/Repairman,Day,80,Completed,Low,Positive safety behaviour observed,0,0,Low
+WRK-013,Drilling,Blaster,Night,96,Expired,Medium,No concerns noted,1,2,Medium
+WRK-014,Safety,Safety Inspector,Night,83,Completed,Low,Housekeeping issue in work area,0,0,Low
+WRK-015,Maintenance,Mechanic/Repairman,Night,83,Completed,Low,Reported loose handrail near shaft entrance,4,1,Medium
+WRK-016,Mining Operations,Blaster,Night,56,Expired,High,Minor near-miss reported by peer,1,3,Critical
+WRK-017,Haulage,Loader Operator,Night,84,Completed,Low,Positive safety behaviour observed,1,1,Medium
+WRK-018,Drilling,Driller,Day,96,Completed,Medium,No concerns noted,2,0,Medium
+WRK-019,Safety,Safety Officer,Night,85,Completed,Low,Reported poor ground support in work area,2,0,Medium
+WRK-020,Maintenance,Maintenance Technician,Day,92,Pending,Low,Reported poor ground support in work area,1,1,Medium
+WRK-021,Mining Operations,Digger,Night,99,Expired,Low,Reported fatigue during shift handover,4,0,Medium
+WRK-022,Maintenance,Mechanic/Repairman,Day,90,Completed,Medium,Reported malfunctioning equipment guard,3,0,Medium
+WRK-023,Safety,Safety Inspector,Day,83,Expired,Medium,Housekeeping issue in work area,1,0,Medium
+WRK-024,Safety,Safety Inspector,Day,92,Completed,Medium,Reported loose handrail near shaft entrance,2,0,Medium
+WRK-025,Maintenance,Mechanic/Repairman,Day,94,Pending,Low,Reported malfunctioning equipment guard,4,1,Medium
+WRK-026,Processing Plant,Processor,Day,46,Completed,High,No concerns noted,4,0,Critical
+WRK-027,Maintenance,Mechanic/Repairman,Night,72,Completed,Medium,Positive safety behaviour observed,2,3,High
+WRK-028,Mining Operations,Digger,Night,96,Completed,High,Reported poor ground support in work area,0,0,Medium
+WRK-029,Drilling,Driller,Night,99,Completed,Medium,PPE not worn correctly during inspection,0,1,Medium
+WRK-030,Mining Operations,Supervisor,Day,96,Completed,Low,Reported loose handrail near shaft entrance,3,0,Medium
+WRK-031,Maintenance,Welder,Day,96,Completed,Low,Reported loose handrail near shaft entrance,1,1,Medium
+WRK-032,Drilling,Driller,Night,97,Pending,Low,Housekeeping issue in work area,2,2,Medium
+WRK-033,Processing Plant,Processor,Night,47,Completed,Medium,Housekeeping issue in work area,2,1,High
+WRK-034,Processing Plant,Processor,Day,100,Completed,Low,PPE not worn correctly during inspection,4,0,Medium
+WRK-035,Mining Operations,General Labourer,Night,54,Completed,Medium,Reported poor ground support in work area,2,1,High
+WRK-036,Processing Plant,Plant Operator,Day,80,Completed,Low,No concerns noted,0,0,Low
+WRK-037,Processing Plant,Processor,Day,87,Expired,Low,Positive safety behaviour observed,0,2,Medium
+WRK-038,Maintenance,Welder,Day,88,Completed,Low,Reported poor ground support in work area,1,1,Medium
+WRK-039,Mining Operations,Digger,Day,85,Completed,Low,No concerns noted,1,1,Medium
+WRK-040,Mining Operations,Supervisor,Day,47,Completed,Medium,Reported poor ground support in work area,2,3,Critical
+WRK-TEST,Mining Operations,Supervisor,Night,20,Completed,Low,No concerns noted,2,2,High

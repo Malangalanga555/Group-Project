@@ -6,14 +6,8 @@ import dashboard
 import alerts
 import analysis
 import reports
+import users
 
-USERS = {
-    "paballo": {"password": "admin123", "role": "Administrator"},
-    "langelihle": {"password": "safety123", "role": "Safety Officer"},
-    "bohlale": {"password": "maint123", "role": "Maintenance Engineer"},
-    "mkhwanazi": {"password": "manager123", "role": "Manager"},
-    "engineer1": {"password": "mining123", "role": "Mining Engineer"},
-}
 
 def login_page():
     st.header("Khwezi Mining - Login")
@@ -22,12 +16,14 @@ def login_page():
     login_button = st.button("Log In")
 
     if login_button:
-        if username in USERS and USERS[username]["password"] == password:
+        role = users.check_login(username, password)
+        if role is not None:
             st.session_state["logged_in"] = True
-            st.session_state["role"] = USERS[username]["role"]
+            st.session_state["role"] = role
             st.rerun()
         else:
             st.error("Incorrect username or password.")
+
 
 def main():
     if "logged_in" not in st.session_state:
@@ -48,6 +44,9 @@ def main():
         if current_role != "Safety Officer":
             menu_options.append("Equipment")
 
+        if current_role == "Administrator":
+            menu_options.append("Manage Users")
+
         choice = st.sidebar.radio("Navigate", menu_options)
 
         if choice == "Dashboard":
@@ -64,9 +63,12 @@ def main():
             analysis.render_analysis_page(current_role)
         elif choice == "Reports":
             reports.render_reports_page(current_role)
+        elif choice == "Manage Users":
+            users.render_manage_users_page()
 
         if st.sidebar.button("Log Out"):
             st.session_state["logged_in"] = False
             st.rerun()
+
 
 main()

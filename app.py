@@ -20,6 +20,7 @@ def login_page():
         if role is not None:
             st.session_state["logged_in"] = True
             st.session_state["role"] = role
+            st.session_state["username"] = username
             st.rerun()
         else:
             st.error("Incorrect username or password.")

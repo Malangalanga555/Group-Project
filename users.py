@@ -76,6 +76,8 @@ def render_manage_users_page():
 
         if not confirm:
             st.error("Please tick the confirmation box first.")
+        elif username_to_remove == st.session_state.get("username"):
+            st.error("You cannot remove your own account while logged in.")
         elif target_role == "Administrator" and admin_count <= 1:
             st.error("Cannot remove the last Administrator.")
         else:

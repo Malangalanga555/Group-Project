@@ -1,0 +1,27 @@
+Equipment ID,Equipment Type,Manufacturer,Operating Hours,Temperature (C),Vibration (mm/s),Fuel Consumption (L/h),Brake Status,Tyre Status,Engine Status,Maintenance Status,Downtime (hrs),Availability (%)
+EQP-001,Excavator,Komatsu,7348,70.2,3.1,24.7,Good,Good,Normal,Up to Date,60,97.7
+EQP-002,Crusher,Epiroc,1634,107.5,9.2,46.2,Good,Needs Replacement,Normal,Due,243,89.9
+EQP-003,Scraper Winch,Epiroc,880,109.5,6.0,56.8,Needs Inspection,Good,Normal,Due,252,82.1
+EQP-004,Conveyor,Epiroc,4348,90.9,8.2,51.1,Good,Worn,Normal,Under Maintenance,56,94.7
+EQP-005,Crusher,Caterpillar,5283,65.8,2.8,59.8,Needs Inspection,Good,Overheating,Under Maintenance,49,97.0
+EQP-006,Haul Truck,Epiroc,8553,103.0,7.6,40.7,Good,Worn,Normal,Overdue,183,93.8
+EQP-007,Scraper Winch,Liebherr,6178,77.3,2.3,22.6,Good,Good,Normal,Due,22,99.0
+EQP-008,Drilling Machine,Epiroc,7168,58.9,3.9,15.6,Good,Good,Needs Service,Up to Date,44,98.3
+EQP-009,Loader,Hitachi,7696,73.6,3.1,52.7,Good,Good,Normal,Up to Date,6,99.6
+EQP-010,Scraper Winch,Hitachi,11074,78.6,4.0,36.6,Good,Worn,Normal,Up to Date,32,97.1
+EQP-011,Scraper Winch,Komatsu,3020,69.4,2.9,41.2,Good,Good,Overheating,Up to Date,61,96.7
+EQP-012,Excavator,Hitachi,885,94.8,6.5,58.0,Good,Needs Replacement,Needs Service,Up to Date,235,86.9
+EQP-013,Loader,Komatsu,7003,85.8,7.3,21.3,Good,Needs Replacement,Normal,Under Maintenance,80,95.4
+EQP-014,Excavator,Hitachi,3474,96.3,8.3,39.8,Good,Worn,Normal,Under Maintenance,43,98.6
+EQP-015,Crusher,Hitachi,8100,64.6,3.4,53.4,Good,Worn,Normal,Up to Date,29,98.1
+EQP-016,Bulldozer,Epiroc,8743,66.8,3.4,39.5,Needs Inspection,Needs Replacement,Normal,Due,7,99.7
+EQP-017,Drilling Machine,Caterpillar,1544,62.8,2.2,17.9,Good,Worn,Overheating,Under Maintenance,53,94.7
+EQP-018,Haul Truck,Komatsu,11639,65.6,3.2,32.5,Good,Worn,Normal,Up to Date,51,93.9
+EQP-019,Crusher,Caterpillar,7496,60.7,2.8,36.9,Good,Good,Overheating,Under Maintenance,80,91.4
+EQP-020,Conveyor,Sandvik,10769,69.9,3.9,42.3,Faulty,Good,Normal,Overdue,33,97.9
+EQP-021,Haul Truck,Caterpillar,3152,62.5,2.8,21.5,Good,Worn,Normal,Overdue,70,94.6
+EQP-022,Loader,Caterpillar,3226,59.9,2.6,43.9,Faulty,Good,Normal,Overdue,24,98.5
+EQP-023,Excavator,Sandvik,11660,60.7,3.8,47.2,Good,Good,Normal,Due,20,99.1
+EQP-024,Crusher,Caterpillar,10686,90.7,9.3,16.5,Good,Good,Normal,Overdue,208,73.5
+EQP-025,Drilling Machine,Liebherr,624,58.5,4.7,23.6,Good,Good,Needs Service,Up to Date,47,91.6
+EQP-026,Haul Truck,Caterpillar,3,62.0,3.0,30.0,Good,Good,Normal,Up to Date,2,60.0

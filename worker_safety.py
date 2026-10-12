@@ -64,45 +64,46 @@ def get_unsafe_condition_warnings(row):
 
 
 
-st.header("Worker Safety Monitoring")
+def render_worker_safety_page():
+    st.header("Worker Safety Monitoring")
 
-df = load_data()
-st.dataframe(df)
+    df = load_data()
+    st.dataframe(df)
 
-st.subheader("Active Warnings")
-for index, row in df.iterrows():
-    row_warnings = get_unsafe_condition_warnings(row)
-    if row_warnings:
-        st.warning(f"{row['Worker ID']}: " + " | ".join(row_warnings))
+    st.subheader("Active Warnings")
+    for index, row in df.iterrows():
+        row_warnings = get_unsafe_condition_warnings(row)
+        if row_warnings:
+            st.warning(f"{row['Worker ID']}: " + " | ".join(row_warnings))
 
-st.subheader("Add New Worker Record")
+    st.subheader("Add New Worker Record")
 
-with st.form("add_worker_form", clear_on_submit=True):
-    worker_id = st.text_input("Worker ID")
-    department = st.selectbox("Department", ["Mining Operations", "Maintenance",
-                                              "Processing Plant", "Haulage", "Drilling", "Safety"])
-    job_role = st.text_input("Job Role")
-    shift = st.selectbox("Shift", ["Day", "Night"])
-    ppe = st.slider("PPE Compliance (%)", 0, 100, 90)
-    training = st.selectbox("Safety Training Status", ["Completed", "Pending", "Expired"])
-    fatigue = st.selectbox("Fatigue Level", ["Low", "Medium", "High"])
-    observations = st.text_area("Safety Observations", "No concerns noted")
-    near_misses = st.number_input("Near Misses", min_value=0, value=0)
-    previous_incidents = st.number_input("Previous Incidents", min_value=0, value=0)
-    submitted = st.form_submit_button("Add Record")
+    with st.form("add_worker_form", clear_on_submit=True):
+        worker_id = st.text_input("Worker ID")
+        department = st.selectbox("Department", ["Mining Operations", "Maintenance",
+                                                    "Processing Plant", "Haulage", "Drilling", "Safety"])
+        job_role = st.text_input("Job Role")
+        shift = st.selectbox("Shift", ["Day", "Night"])
+        ppe = st.slider("PPE Compliance (%)", 0, 100, 90)
+        training = st.selectbox("Safety Training Status", ["Completed", "Pending", "Expired"])
+        fatigue = st.selectbox("Fatigue Level", ["Low", "Medium", "High"])
+        observations = st.text_area("Safety Observations", "No concerns noted")
+        near_misses = st.number_input("Near Misses", min_value=0, value=0)
+        previous_incidents = st.number_input("Previous Incidents", min_value=0, value=0)
+        submitted = st.form_submit_button("Add Record")
 
-if submitted:
-    if worker_id.strip() == "":
-        st.error("Worker ID is required.")
-    else:
-        risk = compute_risk_level(ppe, fatigue, near_misses, previous_incidents)
-        new_row = {
-            "Worker ID": worker_id, "Department": department, "Job Role": job_role,
-            "Shift": shift, "PPE Compliance (%)": ppe, "Safety Training Status": training,
-            "Fatigue Level": fatigue, "Safety Observations": observations,
-            "Near Misses": near_misses, "Previous Incidents": previous_incidents,
-            "Risk Level": risk,
-        }
-        df = pd.concat([df, pd.DataFrame([new_row])], ignore_index=True)
-        df.to_csv("worker_safety.csv", index=False)
-        st.success(f"Record for {worker_id} added. Computed risk level: {risk}.")
+    if submitted:
+        if worker_id.strip() == "":
+            st.error("Worker ID is required.")
+        else:
+            risk = compute_risk_level(ppe, fatigue, near_misses, previous_incidents)
+            new_row = {
+                "Worker ID": worker_id, "Department": department, "Job Role": job_role,
+                "Shift": shift, "PPE Compliance (%)": ppe, "Safety Training Status": training,
+                "Fatigue Level": fatigue, "Safety Observations": observations,
+                "Near Misses": near_misses, "Previous Incidents": previous_incidents,
+                "Risk Level": risk,
+            }
+            df = pd.concat([df, pd.DataFrame([new_row])], ignore_index=True)
+            df.to_csv("worker_safety.csv", index=False)
+            st.success(f"Record for {worker_id} added. Computed risk level: {risk}.")

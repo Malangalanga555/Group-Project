@@ -1,0 +1,29 @@
+Incident ID,Date,Time,Shift,Location,Department,Incident Type,Severity,Injury Status,Lost-Time Injury Status,Cause,Corrective Action,Incident Status
+INC-001,2026-06-09,04:00,Night,Shaft 1 (Underground),Drilling,Pit/Ground Collapse,Moderate,Restricted Work,No,Operating Equipment Incorrectly,Area cordoned off and signage installed,Closed
+INC-002,2026-02-21,09:30,Day,Drill Site 4 (Surface),Drilling,Fire,Moderate,Restricted Work,No,Maintenance/Repair Activity,Investigation ongoing,Under Investigation
+INC-003,2026-03-30,00:30,Night,Drill Site 4 (Surface),Mining Operations,Vehicle Motion Incident,Minor,No Injury,No,Human Error,Equipment guard replaced,Closed
+INC-004,2026-03-04,14:00,Day,Haul Road (Surface),Safety,Falling Object,Moderate,Days Away From Work,Yes,Explosives Charging Procedure,Investigation ongoing,Under Investigation
+INC-005,2026-06-26,06:15,Day,Shaft 1 (Underground),Processing Plant,Fall from Height,Minor,No Injury,No,Ground Support Activity (Barring/Scaling),Retrained personnel on procedure,Closed
+INC-006,2026-08-03,04:00,Night,Workshop (Surface),Mining Operations,Struck by Rock/Rockfall,Moderate,Restricted Work,No,Operating Equipment Incorrectly,Equipment inspected and repaired,Closed
+INC-007,2026-06-20,12:30,Day,Haul Road (Surface),Drilling,Struck by Rock/Rockfall,Minor,No Injury,No,Maintenance/Repair Activity,Investigation ongoing,Under Investigation
+INC-008,2026-04-25,00:30,Night,Drill Site 4 (Surface),Processing Plant,Trapped Between Equipment,Major,Temporary Disability,Yes,Drilling Operation,Retrained personnel on procedure,Closed
+INC-009,2026-08-14,09:15,Day,Pit B (Surface),Processing Plant,Hit by Moving Equipment,Minor,No Injury,No,Lifting/Lowering Operation,PPE reissued and compliance checked,Under Investigation
+INC-010,2026-03-05,16:00,Day,Workshop (Surface),Mining Operations,Equipment Malfunction,Minor,No Injury,No,Operating Equipment Incorrectly,Ground support reinforced,Open
+INC-011,2026-01-06,09:30,Day,Drill Site 4 (Surface),Safety,Chemical Exposure,Minor,No Injury,No,Maintenance/Repair Activity,Ground support reinforced,Closed
+INC-012,2026-07-15,10:45,Day,Shaft 1 (Underground),Maintenance,Slip/Trip/Fall,Minor,No Injury,No,Inadequate Training,Ground support reinforced,Closed
+INC-013,2026-07-07,22:15,Night,Pit A (Surface),Drilling,Fire,Moderate,Restricted Work,No,Equipment Failure,PPE reissued and compliance checked,Closed
+INC-014,2026-01-22,00:00,Night,Workshop (Surface),Maintenance,Hit by Moving Equipment,Moderate,Restricted Work,No,Human Error,Retrained personnel on procedure,Closed
+INC-015,2026-06-10,00:15,Night,Pit B (Surface),Haulage,Electrical Fault,Minor,No Injury,No,Human Error,Equipment inspected and repaired,Under Investigation
+INC-016,2026-06-18,16:00,Day,Pit B (Surface),Safety,Pit/Ground Collapse,Moderate,Restricted Work,No,Drilling Operation,PPE reissued and compliance checked,Under Investigation
+INC-017,2026-03-01,23:45,Night,Stope 12 (Underground),Haulage,Chemical Exposure,Moderate,Days Away From Work,Yes,Operating Equipment Incorrectly,PPE reissued and compliance checked,Open
+INC-018,2026-01-20,19:15,Night,Stope 12 (Underground),Processing Plant,Equipment Malfunction,Minor,No Injury,No,Equipment Failure,Area cordoned off and signage installed,Closed
+INC-019,2026-01-04,15:00,Day,Shaft 2 (Underground),Haulage,Fire,Minor,No Injury,No,Cleaning/Clearing Activity,Investigation ongoing,Closed
+INC-020,2026-07-01,16:30,Day,Drill Site 4 (Surface),Haulage,Vehicle Motion Incident,Minor,First Aid Only,No,Lifting/Lowering Operation,Equipment inspected and repaired,Closed
+INC-021,2026-08-28,15:00,Day,Haul Road (Surface),Processing Plant,Pit/Ground Collapse,Minor,First Aid Only,No,Explosives Charging Procedure,PPE reissued and compliance checked,Closed
+INC-022,2026-08-23,06:00,Day,Stope 12 (Underground),Drilling,Trapped Between Equipment,Minor,No Injury,No,Maintenance/Repair Activity,Investigation ongoing,Closed
+INC-023,2026-08-16,03:30,Night,Workshop (Surface),Maintenance,Slip/Trip/Fall,Minor,First Aid Only,No,Maintenance/Repair Activity,Retrained personnel on procedure,Closed
+INC-024,2026-05-06,21:45,Night,Processing Plant (Surface),Haulage,Fall from Height,Minor,First Aid Only,No,Ground Support Activity (Barring/Scaling),Equipment inspected and repaired,Open
+INC-025,2026-08-04,10:00,Day,Pit B (Surface),Processing Plant,Vehicle Motion Incident,Moderate,Restricted Work,No,Inadequate Training,Retrained personnel on procedure,Closed
+INC-026,2026-09-27,08:30,Day,Substation,Drilling,Falling Object,Minor,First Aid Only,No,Equipment Failure,Investigation ongoing,Under Investigation
+INC-027,2026-09-27,08:45,Day,Workshop (Surface),Drilling,Struck by Rock/Rockfall,Major,Temporary Disability,Yes,Human Error,Investigation ongoing,Under Investigation
+INC-028,2026-09-27,07:45,Day,Pit B (Surface),Mining Operations,Slip/Trip/Fall,Major,Temporary Disability,Yes,Human Error,Investigation ongoing,Closed

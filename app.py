@@ -1,4 +1,9 @@
+import os
 import streamlit as st
+
+# set_page_config must be the first Streamlit command, so it sits above the other imports
+st.set_page_config(page_title="Khwezi Mining", page_icon="⛏️", layout="wide")
+
 import worker_safety
 import incidents
 import equipment
@@ -9,11 +14,66 @@ import reports
 import users
 
 
+ICONS = {
+    "Dashboard": "📊",
+    "Alerts": "🚨",
+    "Data Analysis": "📈",
+    "Reports": "📄",
+    "Worker Safety": "👷",
+    "Safety Incidents": "⚠️",
+    "Equipment": "🚜",
+    "Manage Users": "👥",
+}
+
+STYLE = """
+<style>
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: none; }
+}
+.banner {
+    background: linear-gradient(90deg, #B45309, #F59E0B);
+    padding: 18px 24px;
+    border-radius: 12px;
+    margin-bottom: 18px;
+    animation: fadeIn 0.6s ease-out;
+}
+.banner-title { color: #111827; font-size: 1.8rem; font-weight: 800; }
+.banner-sub   { color: #1F2937; font-size: 1rem; }
+[data-testid="stMetric"] {
+    background: #1F2937;
+    border: 1px solid #374151;
+    border-left: 5px solid #F59E0B;
+    padding: 14px;
+    border-radius: 10px;
+}
+section[data-testid="stSidebar"] { border-right: 2px solid #F59E0B; }
+div.stButton > button, div[data-testid="stFormSubmitButton"] > button {
+    border-radius: 8px;
+    font-weight: 600;
+}
+</style>
+"""
+
+
+def show_banner(subtitle):
+    st.markdown(
+        '<div class="banner">'
+        '<div class="banner-title">⛏️ Khwezi Mining</div>'
+        '<div class="banner-sub">' + subtitle + '</div>'
+        '</div>',
+        unsafe_allow_html=True,
+    )
+
+
 def login_page():
-    st.header("Khwezi Mining - Login")
-    username = st.text_input("Username")
-    password = st.text_input("Password", type="password")
-    login_button = st.button("Log In")
+    left, middle, right = st.columns([1, 2, 1])
+    with middle:
+        show_banner("Health, Safety & Equipment Monitoring")
+        with st.form("login_form"):
+            username = st.text_input("Username")
+            password = st.text_input("Password", type="password")
+            login_button = st.form_submit_button("Log In")
 
     if login_button:
         role = users.check_login(username, password)
@@ -23,10 +83,13 @@ def login_page():
             st.session_state["username"] = username
             st.rerun()
         else:
-            st.error("Incorrect username or password.")
+            with middle:
+                st.error("Incorrect username or password.")
 
 
 def main():
+    st.markdown(STYLE, unsafe_allow_html=True)
+
     if "logged_in" not in st.session_state:
         st.session_state["logged_in"] = False
 
@@ -34,7 +97,11 @@ def main():
         login_page()
     else:
         current_role = st.session_state["role"]
-        st.sidebar.write(f"Logged in as: {current_role}")
+        current_user = st.session_state.get("username", "")
+
+        if os.path.exists("MINE LOGO.png"):
+            st.sidebar.image("MINE LOGO.png", width=200)
+        st.sidebar.write(f"Logged in as: {current_user} ({current_role})")
 
         menu_options = ["Dashboard", "Alerts", "Data Analysis", "Reports"]
 
@@ -48,7 +115,13 @@ def main():
         if current_role == "Administrator":
             menu_options.append("Manage Users")
 
-        choice = st.sidebar.radio("Navigate", menu_options)
+        choice = st.sidebar.radio(
+            "Navigate",
+            menu_options,
+            format_func=lambda name: ICONS.get(name, "") + "  " + name,
+        )
+
+        show_banner(choice)
 
         if choice == "Dashboard":
             dashboard.render_dashboard_page()

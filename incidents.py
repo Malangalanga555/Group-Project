@@ -2,7 +2,6 @@ import os
 import pandas as pd
 import streamlit as st
 
-st.sidebar.image("MINE LOGO.png", width=400)
 
 def load_data():
     if os.path.exists("safety_incidents.csv"):

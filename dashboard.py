@@ -1,4 +1,4 @@
-import streamlit as st
+import streamlit as st #import libraries
 import worker_safety
 import incidents
 import equipment
@@ -9,7 +9,7 @@ def render_dashboard_page():
     workers = worker_safety.load_data()
     inc = incidents.load_data()
     eq = equipment.load_data()
-
+    
     critical_alerts = 0
     warning_alerts = 0
     for index, row in eq.iterrows():
@@ -35,5 +35,4 @@ def render_dashboard_page():
     e3.metric("Under maintenance", under_maintenance)
     e4.metric("Avg availability", f"{eq['Availability (%)'].mean():.1f}%")
     e5.metric("Critical alerts", critical_alerts)
-    st.caption(f"{warning_alerts} more units are at WARNING level. "
-               "Thresholds are educational prototype values only.")
+    st.caption(f"{warning_alerts} more units are at WARNING level." "Thresholds are educational prototype values only.")
